@@ -30,3 +30,5 @@
 *.exe
 *.out
 *.app
+/.vs/CPP Adventures
+/x64/Debug
