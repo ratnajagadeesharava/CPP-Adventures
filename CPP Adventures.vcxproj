@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -127,12 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Employee.cpp" />
+    <ClCompile Include="Human.cpp" />
     <ClCompile Include="lambdas.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="pointers.cpp" />
     <ClCompile Include="threads.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Employee.h" />
+    <ClInclude Include="Human.h" />
     <ClInclude Include="lambdas.h" />
+    <ClInclude Include="pointers.h" />
     <ClInclude Include="threads.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -47,13 +47,13 @@ namespace CPP_Adventures {
 
 	void DriveBike(std::string biker) {
 
-		std::unique_lock<std::mutex> bikeLock(Threads::BikeMutex);
+		/*std::unique_lock<std::mutex> bikeLock(Threads::BikeMutex);
 		std::cout << biker << "started Driving" <<std::endl;
 
 		std::this_thread::sleep_for(std::chrono::seconds(2));
 		std::cout << biker << "has completed a ride" << std::endl;
 
-		bikeLock.unlock();
+		bikeLock.unlock();*/
 	}
 
 	void Threads::RunMutex()
