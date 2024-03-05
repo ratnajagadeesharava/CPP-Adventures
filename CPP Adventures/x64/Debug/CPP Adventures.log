@@ -1,12 +1,5 @@
-﻿  Employee.cpp
-  Human.cpp
-  lambdas.cpp
-  main.cpp
+﻿  main.cpp
 C:\Users\ratna\source\repos\CPP Adventures\main.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\ratna\source\repos\CPP Adventures\main.cpp(22,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
-C:\Users\ratna\source\repos\CPP Adventures\main.cpp(38,10): warning C4101: 'lam': unreferenced local variable
-  pointers.cpp
-  threads.cpp
-  Vector.cpp
-  Generating Code...
+C:\Users\ratna\source\repos\CPP Adventures\main.cpp(24,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\ratna\source\repos\CPP Adventures\main.cpp(57,10): warning C4101: 'lam': unreferenced local variable
   CPP Adventures.vcxproj -> C:\Users\ratna\source\repos\CPP Adventures\x64\Debug\CPP Adventures.exe
