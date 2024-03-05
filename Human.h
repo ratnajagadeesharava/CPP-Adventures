@@ -2,6 +2,7 @@
 #include<iostream>
 #define COUT std::cout
 #define ENDLINE std::endl;
+
 #include <string>
 namespace CPP_Adventures {
 	class Human

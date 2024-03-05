@@ -1,5 +1,6 @@
 #pragma once
 #include<memory>
+namespace CPP_Adventures{
 class SmartPointers
 {
 	std::unique_ptr<int> unptr1 = std::make_unique<int>(100);
@@ -11,5 +12,5 @@ class SmartPointers
 public:
 	SmartPointers();
 	~SmartPointers();
-};
+};}
 
