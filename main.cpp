@@ -1,7 +1,9 @@
 #include<iostream>
+#include<fstream>
+#include<thread>
+
 #include "lambdas.h"
 #include "pointers.h";
-#include <thread>
 #include "threads.h"
 #include "Human.h"
 #include "SmartPointers.h"
@@ -13,7 +15,28 @@ void ChangeHuman(Human *h1) {
 		h1->name = "ARJ";
 
 }
+void writeToTextFile(string fileName) {
+	fstream myFile;
+	myFile.open("random.txt", ios::app);
+	if (myFile.is_open()) {
+		myFile<< "hello file" << endl;
+		myFile << "this is comming from the program" << endl;
+		myFile.close();
+		cout << "File Closed Succesfully" << endl;
+	}
+}
 
+
+void readTextFile(string fileName) {
+	fstream myFile;
+	myFile.open(fileName, ios::in);
+	string line;
+	while (getline(myFile, line)) {
+		cout << line << endl;
+	}
+	myFile.close();
+	
+}
 void ChangeHumanByValue(Human human) {
 	COUT << human.name << ENDLINE
 	human.name = "ARJ2";
@@ -23,6 +46,8 @@ void ChangeHumanByValue(Human human) {
 
 void main() {
 	std::cout << "Hello World" << std::endl;
+	writeToTextFile("test.text");
+	readTextFile("test.text");
 	//Threads::call_threads(10);
 	//Threads::MakeForecasts();
 	//Threads::RunMutex();
@@ -37,22 +62,22 @@ void main() {
 	COUT << human.name <<ENDLINE
 	COUT << h2->name << ENDLINE
 		*/
-	{
-		//unique_ptr allocates and deallocates memory
-		unique_ptr<SmartPointers> uptr1 = make_unique<SmartPointers>();
-	}
+	//{
+	//	//unique_ptr allocates and deallocates memory
+	//	unique_ptr<SmartPointers> uptr1 = make_unique<SmartPointers>();
+	//}
 
-	shared_ptr<SmartPointers> sharedPtr1 = make_shared<SmartPointers>();
-	{
-		shared_ptr<SmartPointers> sharedPtr2 = sharedPtr1;
-		cout << "Shared Count In Scope " << sharedPtr1.use_count() << endl;
-	}
-	cout << "Shared Count  " << sharedPtr1.use_count()<<endl;
-	cout << "WeakPointer Count  "  << endl;
-	weak_ptr<SmartPointers> weakPtr1;
-	{
-		shared_ptr<SmartPointers> sharedPtr3 = make_shared<SmartPointers>();
-		weakPtr1 = sharedPtr3;
-	}
-	lambdas lam;
+	//shared_ptr<SmartPointers> sharedPtr1 = make_shared<SmartPointers>();
+	//{
+	//	shared_ptr<SmartPointers> sharedPtr2 = sharedPtr1;
+	//	cout << "Shared Count In Scope " << sharedPtr1.use_count() << endl;
+	//}
+	//cout << "Shared Count  " << sharedPtr1.use_count()<<endl;
+	//cout << "WeakPointer Count  "  << endl;
+	//weak_ptr<SmartPointers> weakPtr1;
+	//{
+	//	shared_ptr<SmartPointers> sharedPtr3 = make_shared<SmartPointers>();
+	//	weakPtr1 = sharedPtr3;
+	//}
+	//lambdas lam;
 }

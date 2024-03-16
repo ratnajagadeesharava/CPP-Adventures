@@ -5,7 +5,11 @@
       <FullPath>C:\Users\ratna\source\repos\CPP Adventures\x64\Debug\CPP Adventures.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
-  <ContentFiles />
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>C:\Users\ratna\source\repos\CPP Adventures\test.text</FullPath>
+    </ContentFile>
+  </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />
 </Project>
