@@ -1,4 +1,14 @@
-﻿  main.cpp
-C:\Users\ratna\source\repos\CPP Adventures\main.cpp(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\ratna\source\repos\CPP Adventures\main.cpp(47,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+﻿  Solution.cpp
+C:\Users\ratna\source\repos\CPP Adventures\Solution.cpp(70,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ratna\source\repos\CPP Adventures\Solution.cpp(99,9): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ratna\source\repos\CPP Adventures\Solution.cpp(116,9): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ratna\source\repos\CPP Adventures\Solution.cpp(158,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ratna\source\repos\CPP Adventures\Solution.cpp(159,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ratna\source\repos\CPP Adventures\Solution.cpp(178,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ratna\source\repos\CPP Adventures\Solution.cpp(223,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ratna\source\repos\CPP Adventures\Solution.cpp(224,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ratna\source\repos\CPP Adventures\Solution.cpp(324,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ratna\source\repos\CPP Adventures\Solution.cpp(325,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ratna\source\repos\CPP Adventures\Solution.cpp(534,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ratna\source\repos\CPP Adventures\Solution.cpp(590,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   CPP Adventures.vcxproj -> C:\Users\ratna\source\repos\CPP Adventures\x64\Debug\CPP Adventures.exe

@@ -7,6 +7,14 @@
 #include "threads.h"
 #include "Human.h"
 #include "SmartPointers.h"
+
+#include <Eigen/Dense>
+#include <Eigen/Sparse>
+#include "Solution.hpp"
+
+
+
+using namespace Eigen;
 using namespace std;
 using namespace CPP_Adventures;
 
@@ -25,8 +33,9 @@ void writeToTextFile(string fileName) {
 		cout << "File Closed Succesfully" << endl;
 	}
 }
-
-
+#define A -B
+#define B -C
+#define C 5
 void readTextFile(string fileName) {
 	fstream myFile;
 	myFile.open(fileName, ios::in);
@@ -42,42 +51,80 @@ void ChangeHumanByValue(Human human) {
 	human.name = "ARJ2";
 
 }
+void setZeroes(vector<vector<int>>& matrix) {
+	int m = matrix.size();
+	int n = matrix[0].size();
+
+	int r = 0;
+	int c = 0;
+	if (n == 0)
+		return;
+	for (int i = 0; i < m; i++) {
 
 
-void main() {
-	std::cout << "Hello World" << std::endl;
-	writeToTextFile("test.text");
-	readTextFile("test.text");
-	//Threads::call_threads(10);
-	//Threads::MakeForecasts();
-	//Threads::RunMutex();
-	//pointers::BasePointer();
-	//pointers::ArrayPointer();
-	/*Human human("Jagadeesh", 24);
-	Human* h2 = new Human("RJ", 25);
-	ChangeHuman(&human);
-	ChangeHuman(h2);
-	ChangeHumanByValue(human);
-	ChangeHumanByValue(*h2);
-	COUT << human.name <<ENDLINE
-	COUT << h2->name << ENDLINE
-		*/
-	//{
-	//	//unique_ptr allocates and deallocates memory
-	//	unique_ptr<SmartPointers> uptr1 = make_unique<SmartPointers>();
-	//}
+		for (int j = 0; j < n; j++) {
+			if (matrix[i][j] == 0) {
+				int rd = pow(2, i);
+				int cd = pow(2, j);
+				r = r | rd;
+				c = c | cd;
+			}
+		}
+	}
+	//cout << r << " " << c << "  " << endl;
+	bool rowflag = false;
+	bool colflag = false;
+	for (int i = 0; i < m; i++) {
+		
+		int k = c;
+		for (int j = 0; j < n; j++) {
+			
+			
+			if (k % 2 == 1|| r%2 ==1) {
+				matrix[i][j] = 0;
+			}
+			k = k << 1;
+		}
+		r = r << 1;
+	}
 
-	//shared_ptr<SmartPointers> sharedPtr1 = make_shared<SmartPointers>();
-	//{
-	//	shared_ptr<SmartPointers> sharedPtr2 = sharedPtr1;
-	//	cout << "Shared Count In Scope " << sharedPtr1.use_count() << endl;
-	//}
-	//cout << "Shared Count  " << sharedPtr1.use_count()<<endl;
-	//cout << "WeakPointer Count  "  << endl;
-	//weak_ptr<SmartPointers> weakPtr1;
-	//{
-	//	shared_ptr<SmartPointers> sharedPtr3 = make_shared<SmartPointers>();
-	//	weakPtr1 = sharedPtr3;
-	//}
-	//lambdas lam;
+
 }
+
+
+int const s = 123;
+#define MAX 1000
+
+struct s1 {
+	int a = 22;
+};
+
+void fun() {
+	static int i = 5;
+	if (--i) {
+		cout << i << endl;
+		fun();
+	}
+}
+
+struct sample {
+	int a;
+}s1;
+enum color {
+	black ,
+	red,
+	blue,
+	green
+
+};
+
+template <typename T>
+T sum(T a, T b ,int c) {
+	return a + b+c;
+}
+const int j = 9;
+void main() {
+	CPP_adventures::Solution sol;
+	sol.callMethod();
+}
+
